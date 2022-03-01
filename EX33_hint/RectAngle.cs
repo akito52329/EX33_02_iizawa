@@ -41,5 +41,12 @@ namespace EX33_hint
                 || rectAngle1.width == rectAngle2.height
                 && rectAngle1.height == rectAngle2.width);
         }
+
+        public static float operator +(RectAngle rectAngle1, RectAngle rectAngle2)
+        {
+            var syntheticWidth = Math.Max(Math.Max(rectAngle1.width, rectAngle1.height), Math.Max(rectAngle2.width, rectAngle2.height));
+            var syntheticHeight = Math.Min(rectAngle1.width, rectAngle1.height) + Math.Min(rectAngle2.width, rectAngle2.height);
+            return syntheticWidth * syntheticHeight;
+        }
     }
 }
