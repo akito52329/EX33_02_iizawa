@@ -57,10 +57,15 @@ namespace EX33_hint
                 syntheticWidth = rectAngle2.width;
                 syntheticHeight =Math.Max(rectAngle1.width, rectAngle1.height) + rectAngle2.height;
             }
+            else if (rectAngle1.width == rectAngle1.height && rectAngle2.width == rectAngle2.height)
+            {
+                syntheticWidth = rectAngle1.width;
+                syntheticHeight = rectAngle1.width * 2;
+            }
             else
             {
-            syntheticWidth = Math.Max(Math.Max(rectAngle1.width, rectAngle1.height), Math.Max(rectAngle2.width, rectAngle2.height));
-            syntheticHeight = Math.Min(rectAngle1.width, rectAngle1.height) + Math.Min(rectAngle2.width, rectAngle2.height);
+                syntheticWidth = Math.Max(Math.Max(rectAngle1.width, rectAngle1.height), Math.Max(rectAngle2.width, rectAngle2.height));
+                syntheticHeight = Math.Min(rectAngle1.width, rectAngle1.height) + Math.Min(rectAngle2.width, rectAngle2.height);
             }
 
             return new RectAngle(syntheticHeight,syntheticWidth);
