@@ -6,8 +6,8 @@ namespace EX33_hint
     {
         static void Main(string[] args)
         {
-            RectAngle rectAngle1 = new RectAngle(10, 10);
-            RectAngle rectAngle2 = new RectAngle(10, 10);
+            RectAngle rectAngle1 = new RectAngle(3, 9);
+            RectAngle rectAngle2 = new RectAngle(13, 3);
             var rectAngle3 = rectAngle1 + rectAngle2;
             if (rectAngle1 == rectAngle2)
             {
